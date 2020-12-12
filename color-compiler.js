@@ -22,7 +22,7 @@ function colorCompiler(color) {
       return compileHsv(_color);
    }
    if(/^(hsl)/i.test(_color)) {
-
+      return compileHsl(_color);
    }
    if(/^(#)/i.test(_color)) {
 
@@ -118,10 +118,55 @@ function compileHsv(hsvColor) {
    }
 }
 
+function compileHsl(hslColor) {
+   let hue, saturate, lightness;
+   
+   if(/^(hsl)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,}\)$/i.test(hslColor)
+      || /^(hsla)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]|(0\.([0-9]{1,})))\s{0,}\)$/i.test(hslColor)) {
+      let splitedValues = hslColor.split(/([0-9]{1,})/);
+      hue = parseInt(splitedValues[1]);
+      saturate = parseInt(splitedValues[3]);
+      lightness = parseInt(splitedValues[5]);
+
+      if(hue > 360) {
+         throw new RangeError(`COMPILER_ERR:: '${hslColor}' --> ${hue} is an invalid hue value, it must be an interger between 0 and 360`);
+      }
+      if(saturate > 100) {
+         throw new RangeError(`COMPILER_ERR:: '${hslColor}' --> ${saturate} is an invalid saturate value, it must be an interger between 0 and 100`);
+      }
+      if(lightness > 100) {
+         throw new RangeError(`COMPILER_ERR:: '${hslColor}' --> ${lightness} is an invalid lightness value, it must be an interger between 0 and 100`);
+      }
+
+      if(/^(hsla)/i.test(hslColor)) {
+         let alpha = parseFloat(hslColor.split(",")[3]);
+   
+         if(alpha > 1) {
+            throw new RangeError(`COMPILER_ERR:: '${hslColor}' --> ${alpha} is an invalid alpha value, it must be an interger or a float number between 0 and 1`);
+         }
+   
+         return { hue, saturate, lightness, alpha };
+      }
+      else {
+         return { hue, saturate, lightness };
+      }
+   }
+   else {
+      if(/^(hsla)/i.test(hslColor)) {
+         throw new SyntaxError(`COMPILER_ERR:: '${hslColor}' is an invalid HSLA color value`);
+      }
+      else {
+         throw new SyntaxError(`COMPILER_ERR:: '${hslColor}' is an invalid HSL color value`);
+      }
+   }
+}
+
+
+
 
 // let color = colorCompiler('rgba(120 240, 67, 1)');
 // let color = colorCompiler('hsva(120deg, 67%, 1%, 1)');
 // let color = colorCompiler('hsv(120°, 67%, 1%)');
 // let color = colorCompiler('hsva(360, 67%, 1%, 0)');
-let color = colorCompiler('hsva(120°, 67%, 1%, 0.031)');
+let color = colorCompiler('hsla(120, 67%, 1%, 0.031)');
 console.log(color);
