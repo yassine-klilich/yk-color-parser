@@ -1,0 +1,19 @@
+{
+  "name": "color-converter",
+  "version": "1.0.0",
+  "description": "Convert a color from string value to an object",
+  "main": "color-converter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yassine-klilich/color-compiler.git"
+  },
+  "author": "Yassine Klilich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yassine-klilich/color-compiler/issues"
+  },
+  "homepage": "https://github.com/yassine-klilich/color-compiler#readme"
+}
