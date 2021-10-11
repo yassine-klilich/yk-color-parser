@@ -3,7 +3,7 @@
 const ColorConverter = (function() {
 	
 	const NAMED_COLORS = [
-    {
+		{
 			name: "aliceblue",
 			code: {
 				red: "F0",
@@ -11,8 +11,8 @@ const ColorConverter = (function() {
 				blue: "FF",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "antiquewhite",
 			code: {
 				red: "FA",
@@ -20,8 +20,8 @@ const ColorConverter = (function() {
 				blue: "D7",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "aqua",
 			code: {
 				red: "00",
@@ -29,8 +29,8 @@ const ColorConverter = (function() {
 				blue: "FF",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "aquamarine",
 			code: {
 				red: "7F",
@@ -38,8 +38,8 @@ const ColorConverter = (function() {
 				blue: "D4",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "azure",
 			code: {
 				red: "F0",
@@ -47,8 +47,8 @@ const ColorConverter = (function() {
 				blue: "FF",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "beige",
 			code: {
 				red: "F5",
@@ -56,8 +56,8 @@ const ColorConverter = (function() {
 				blue: "DC",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "bisque",
 			code: {
 				red: "FF",
@@ -65,8 +65,8 @@ const ColorConverter = (function() {
 				blue: "C4",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "black",
 			code: {
 				red: "00",
@@ -74,8 +74,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "blanchedalmond",
 			code: {
 				red: "FF",
@@ -83,8 +83,8 @@ const ColorConverter = (function() {
 				blue: "CD",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "blue",
 			code: {
 				red: "00",
@@ -92,8 +92,8 @@ const ColorConverter = (function() {
 				blue: "FF",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "blueviolet",
 			code: {
 				red: "8A",
@@ -101,8 +101,8 @@ const ColorConverter = (function() {
 				blue: "E2",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "brown",
 			code: {
 				red: "A5",
@@ -110,8 +110,8 @@ const ColorConverter = (function() {
 				blue: "2A",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "burlywood",
 			code: {
 				red: "DE",
@@ -120,7 +120,7 @@ const ColorConverter = (function() {
 				alpha: "FF"
 			}
 		},
-    {
+		{
 			name: "cadetblue",
 			code: {
 				red: "5F",
@@ -128,8 +128,8 @@ const ColorConverter = (function() {
 				blue: "A0",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "chartreuse",
 			code: {
 				red: "7F",
@@ -137,8 +137,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "chocolate",
 			code: {
 				red: "D2",
@@ -146,8 +146,8 @@ const ColorConverter = (function() {
 				blue: "1E",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "coral",
 			code: {
 				red: "FF",
@@ -155,8 +155,8 @@ const ColorConverter = (function() {
 				blue: "50",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "cornflowerblue",
 			code: {
 				red: "64",
@@ -164,8 +164,8 @@ const ColorConverter = (function() {
 				blue: "ED",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "cornsilk",
 			code: {
 				red: "FF",
@@ -173,8 +173,8 @@ const ColorConverter = (function() {
 				blue: "DC",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "crimson",
 			code: {
 				red: "DC",
@@ -182,8 +182,8 @@ const ColorConverter = (function() {
 				blue: "3C",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "cyan",
 			code: {
 				red: "00",
@@ -191,8 +191,8 @@ const ColorConverter = (function() {
 				blue: "FF",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkblue",
 			code: {
 				red: "00",
@@ -200,8 +200,8 @@ const ColorConverter = (function() {
 				blue: "8B",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkcyan",
 			code: {
 				red: "00",
@@ -209,8 +209,8 @@ const ColorConverter = (function() {
 				blue: "8B",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkgoldenrod",
 			code: {
 				red: "B8",
@@ -218,8 +218,8 @@ const ColorConverter = (function() {
 				blue: "0B",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkgray",
 			code: {
 				red: "A9",
@@ -227,8 +227,8 @@ const ColorConverter = (function() {
 				blue: "A9",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkgrey",
 			code: {
 				red: "A9",
@@ -236,8 +236,8 @@ const ColorConverter = (function() {
 				blue: "A9",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkgreen",
 			code: {
 				red: "00",
@@ -245,8 +245,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkkhaki",
 			code: {
 				red: "BD",
@@ -254,8 +254,8 @@ const ColorConverter = (function() {
 				blue: "6B",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkmagenta",
 			code: {
 				red: "8B",
@@ -263,8 +263,8 @@ const ColorConverter = (function() {
 				blue: "8B",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkolivegreen",
 			code: {
 				red: "55",
@@ -272,8 +272,8 @@ const ColorConverter = (function() {
 				blue: "2F",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkorange",
 			code: {
 				red: "FF",
@@ -281,8 +281,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkorchid",
 			code: {
 				red: "99",
@@ -290,8 +290,8 @@ const ColorConverter = (function() {
 				blue: "CC",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkred",
 			code: {
 				red: "8B",
@@ -299,8 +299,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darksalmon",
 			code: {
 				red: "E9",
@@ -308,8 +308,8 @@ const ColorConverter = (function() {
 				blue: "7A",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkseagreen",
 			code: {
 				red: "8F",
@@ -317,8 +317,8 @@ const ColorConverter = (function() {
 				blue: "8F",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkslateblue",
 			code: {
 				red: "48",
@@ -326,8 +326,8 @@ const ColorConverter = (function() {
 				blue: "8B",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkslategray",
 			code: {
 				red: "2F",
@@ -335,8 +335,8 @@ const ColorConverter = (function() {
 				blue: "4F",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkslategrey",
 			code: {
 				red: "2F",
@@ -344,8 +344,8 @@ const ColorConverter = (function() {
 				blue: "4F",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkturquoise",
 			code: {
 				red: "00",
@@ -353,8 +353,8 @@ const ColorConverter = (function() {
 				blue: "D1",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "darkviolet",
 			code: {
 				red: "94",
@@ -362,8 +362,8 @@ const ColorConverter = (function() {
 				blue: "D3",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "deeppink",
 			code: {
 				red: "FF",
@@ -371,8 +371,8 @@ const ColorConverter = (function() {
 				blue: "93",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "deepskyblue",
 			code: {
 				red: "00",
@@ -380,8 +380,8 @@ const ColorConverter = (function() {
 				blue: "FF",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "dimgray",
 			code: {
 				red: "69",
@@ -389,8 +389,8 @@ const ColorConverter = (function() {
 				blue: "69",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "dimgrey",
 			code: {
 				red: "69",
@@ -398,8 +398,8 @@ const ColorConverter = (function() {
 				blue: "69",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "dodgerblue",
 			code: {
 				red: "1E",
@@ -407,8 +407,8 @@ const ColorConverter = (function() {
 				blue: "FF",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "firebrick",
 			code: {
 				red: "B2",
@@ -416,8 +416,8 @@ const ColorConverter = (function() {
 				blue: "22",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "floralwhite",
 			code: {
 				red: "FF",
@@ -425,8 +425,8 @@ const ColorConverter = (function() {
 				blue: "F0",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "forestgreen",
 			code: {
 				red: "22",
@@ -434,8 +434,8 @@ const ColorConverter = (function() {
 				blue: "22",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "fuchsia",
 			code: {
 				red: "FF",
@@ -443,8 +443,8 @@ const ColorConverter = (function() {
 				blue: "FF",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "gainsboro",
 			code: {
 				red: "DC",
@@ -452,8 +452,8 @@ const ColorConverter = (function() {
 				blue: "DC",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "ghostwhite",
 			code: {
 				red: "F8",
@@ -461,8 +461,8 @@ const ColorConverter = (function() {
 				blue: "FF",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "gold",
 			code: {
 				red: "FF",
@@ -470,8 +470,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "goldenrod",
 			code: {
 				red: "DA",
@@ -479,8 +479,8 @@ const ColorConverter = (function() {
 				blue: "20",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "gray",
 			code: {
 				red: "80",
@@ -488,8 +488,8 @@ const ColorConverter = (function() {
 				blue: "80",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "grey",
 			code: {
 				red: "80",
@@ -497,8 +497,8 @@ const ColorConverter = (function() {
 				blue: "80",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "green",
 			code: {
 				red: "00",
@@ -506,8 +506,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "greenyellow",
 			code: {
 				red: "AD",
@@ -515,8 +515,8 @@ const ColorConverter = (function() {
 				blue: "2F",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "honeydew",
 			code: {
 				red: "F0",
@@ -524,8 +524,8 @@ const ColorConverter = (function() {
 				blue: "F0",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "hotpink",
 			code: {
 				red: "FF",
@@ -533,8 +533,8 @@ const ColorConverter = (function() {
 				blue: "B4",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "indianred ",
 			code: {
 				red: "CD",
@@ -542,8 +542,8 @@ const ColorConverter = (function() {
 				blue: "5C",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "indigo ",
 			code: {
 				red: "4B",
@@ -551,8 +551,8 @@ const ColorConverter = (function() {
 				blue: "82",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "ivory",
 			code: {
 				red: "FF",
@@ -560,8 +560,8 @@ const ColorConverter = (function() {
 				blue: "F0",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "khaki",
 			code: {
 				red: "F0",
@@ -569,8 +569,8 @@ const ColorConverter = (function() {
 				blue: "8C",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lavender",
 			code: {
 				red: "E6",
@@ -578,8 +578,8 @@ const ColorConverter = (function() {
 				blue: "FA",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lavenderblush",
 			code: {
 				red: "FF",
@@ -587,8 +587,8 @@ const ColorConverter = (function() {
 				blue: "F5",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lawngreen",
 			code: {
 				red: "7C",
@@ -596,8 +596,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lemonchiffon",
 			code: {
 				red: "FF",
@@ -605,8 +605,8 @@ const ColorConverter = (function() {
 				blue: "CD",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightblue",
 			code: {
 				red: "AD",
@@ -614,8 +614,8 @@ const ColorConverter = (function() {
 				blue: "E6",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightcoral",
 			code: {
 				red: "F0",
@@ -623,8 +623,8 @@ const ColorConverter = (function() {
 				blue: "80",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightcyan",
 			code: {
 				red: "E0",
@@ -632,8 +632,8 @@ const ColorConverter = (function() {
 				blue: "FF",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightgoldenrodyellow",
 			code: {
 				red: "FA",
@@ -641,8 +641,8 @@ const ColorConverter = (function() {
 				blue: "D2",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightgray",
 			code: {
 				red: "D3",
@@ -650,8 +650,8 @@ const ColorConverter = (function() {
 				blue: "D3",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightgrey",
 			code: {
 				red: "D3",
@@ -659,8 +659,8 @@ const ColorConverter = (function() {
 				blue: "D3",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightgreen",
 			code: {
 				red: "90",
@@ -668,8 +668,8 @@ const ColorConverter = (function() {
 				blue: "90",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightpink",
 			code: {
 				red: "FF",
@@ -677,8 +677,8 @@ const ColorConverter = (function() {
 				blue: "C1",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightsalmon",
 			code: {
 				red: "FF",
@@ -686,8 +686,8 @@ const ColorConverter = (function() {
 				blue: "7A",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightseagreen",
 			code: {
 				red: "20",
@@ -695,8 +695,8 @@ const ColorConverter = (function() {
 				blue: "AA",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightskyblue",
 			code: {
 				red: "87",
@@ -704,8 +704,8 @@ const ColorConverter = (function() {
 				blue: "FA",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightslategray",
 			code: {
 				red: "77",
@@ -713,8 +713,8 @@ const ColorConverter = (function() {
 				blue: "99",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightslategrey",
 			code: {
 				red: "77",
@@ -722,8 +722,8 @@ const ColorConverter = (function() {
 				blue: "99",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lightsteelblue",
 			code: {
 				red: "B0",
@@ -740,8 +740,8 @@ const ColorConverter = (function() {
 				blue: "E0",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "lime",
 			code: {
 				red: "00",
@@ -749,8 +749,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "limegreen",
 			code: {
 				red: "32",
@@ -758,8 +758,8 @@ const ColorConverter = (function() {
 				blue: "32",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "linen",
 			code: {
 				red: "FA",
@@ -767,8 +767,8 @@ const ColorConverter = (function() {
 				blue: "E6",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "magenta",
 			code: {
 				red: "FF",
@@ -776,8 +776,8 @@ const ColorConverter = (function() {
 				blue: "FF",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "maroon",
 			code: {
 				red: "80",
@@ -785,8 +785,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "mediumaquamarine",
 			code: {
 				red: "66",
@@ -794,8 +794,8 @@ const ColorConverter = (function() {
 				blue: "AA",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "mediumblue",
 			code: {
 				red: "00",
@@ -803,8 +803,8 @@ const ColorConverter = (function() {
 				blue: "CD",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "mediumorchid",
 			code: {
 				red: "BA",
@@ -812,8 +812,8 @@ const ColorConverter = (function() {
 				blue: "D3",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "mediumpurple",
 			code: {
 				red: "93",
@@ -821,8 +821,8 @@ const ColorConverter = (function() {
 				blue: "D8",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "mediumseagreen",
 			code: {
 				red: "3C",
@@ -830,8 +830,8 @@ const ColorConverter = (function() {
 				blue: "71",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "mediumslateblue",
 			code: {
 				red: "7B",
@@ -839,8 +839,8 @@ const ColorConverter = (function() {
 				blue: "EE",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "mediumspringgreen",
 			code: {
 				red: "00",
@@ -848,8 +848,8 @@ const ColorConverter = (function() {
 				blue: "9A",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "mediumturquoise",
 			code: {
 				red: "48",
@@ -857,8 +857,8 @@ const ColorConverter = (function() {
 				blue: "CC",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "mediumvioletred",
 			code: {
 				red: "C7",
@@ -866,8 +866,8 @@ const ColorConverter = (function() {
 				blue: "85",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "midnightblue",
 			code: {
 				red: "19",
@@ -875,8 +875,8 @@ const ColorConverter = (function() {
 				blue: "70",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "mintcream",
 			code: {
 				red: "F5",
@@ -884,8 +884,8 @@ const ColorConverter = (function() {
 				blue: "FA",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "mistyrose",
 			code: {
 				red: "FF",
@@ -893,8 +893,8 @@ const ColorConverter = (function() {
 				blue: "E1",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "moccasin",
 			code: {
 				red: "FF",
@@ -902,8 +902,8 @@ const ColorConverter = (function() {
 				blue: "B5",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "navajowhite",
 			code: {
 				red: "FF",
@@ -920,8 +920,8 @@ const ColorConverter = (function() {
 				blue: "80",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "oldlace",
 			code: {
 				red: "FD",
@@ -929,8 +929,8 @@ const ColorConverter = (function() {
 				blue: "E6",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "olive",
 			code: {
 				red: "80",
@@ -938,8 +938,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "olivedrab",
 			code: {
 				red: "6B",
@@ -947,8 +947,8 @@ const ColorConverter = (function() {
 				blue: "23",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "orange",
 			code: {
 				red: "FF",
@@ -956,8 +956,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "orangered",
 			code: {
 				red: "FF",
@@ -965,8 +965,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "orchid",
 			code: {
 				red: "DA",
@@ -974,8 +974,8 @@ const ColorConverter = (function() {
 				blue: "D6",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "palegoldenrod",
 			code: {
 				red: "EE",
@@ -983,8 +983,8 @@ const ColorConverter = (function() {
 				blue: "AA",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "palegreen",
 			code: {
 				red: "98",
@@ -992,8 +992,8 @@ const ColorConverter = (function() {
 				blue: "98",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "paleturquoise",
 			code: {
 				red: "AF",
@@ -1001,8 +1001,8 @@ const ColorConverter = (function() {
 				blue: "EE",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "palevioletred",
 			code: {
 				red: "D8",
@@ -1010,8 +1010,8 @@ const ColorConverter = (function() {
 				blue: "93",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "papayawhip",
 			code: {
 				red: "FF",
@@ -1019,8 +1019,8 @@ const ColorConverter = (function() {
 				blue: "D5",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "peachpuff",
 			code: {
 				red: "FF",
@@ -1028,8 +1028,8 @@ const ColorConverter = (function() {
 				blue: "B9",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "peru",
 			code: {
 				red: "CD",
@@ -1037,8 +1037,8 @@ const ColorConverter = (function() {
 				blue: "3F",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "pink",
 			code: {
 				red: "FF",
@@ -1046,8 +1046,8 @@ const ColorConverter = (function() {
 				blue: "CB",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "plum",
 			code: {
 				red: "DD",
@@ -1055,8 +1055,8 @@ const ColorConverter = (function() {
 				blue: "DD",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "powderblue",
 			code: {
 				red: "B0",
@@ -1064,8 +1064,8 @@ const ColorConverter = (function() {
 				blue: "E6",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "purple",
 			code: {
 				red: "80",
@@ -1073,8 +1073,8 @@ const ColorConverter = (function() {
 				blue: "80",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "red",
 			code: {
 				red: "FF",
@@ -1082,8 +1082,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "rosybrown",
 			code: {
 				red: "BC",
@@ -1091,8 +1091,8 @@ const ColorConverter = (function() {
 				blue: "8F",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "royalblue",
 			code: {
 				red: "41",
@@ -1100,8 +1100,8 @@ const ColorConverter = (function() {
 				blue: "E1",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "saddlebrown",
 			code: {
 				red: "8B",
@@ -1109,8 +1109,8 @@ const ColorConverter = (function() {
 				blue: "13",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "salmon",
 			code: {
 				red: "FA",
@@ -1118,8 +1118,8 @@ const ColorConverter = (function() {
 				blue: "72",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "sandybrown",
 			code: {
 				red: "F4",
@@ -1127,8 +1127,8 @@ const ColorConverter = (function() {
 				blue: "60",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "seagreen",
 			code: {
 				red: "2E",
@@ -1136,8 +1136,8 @@ const ColorConverter = (function() {
 				blue: "57",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "seashell",
 			code: {
 				red: "FF",
@@ -1145,8 +1145,8 @@ const ColorConverter = (function() {
 				blue: "EE",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "sienna",
 			code: {
 				red: "A0",
@@ -1154,8 +1154,8 @@ const ColorConverter = (function() {
 				blue: "2D",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "silver",
 			code: {
 				red: "C0",
@@ -1163,8 +1163,8 @@ const ColorConverter = (function() {
 				blue: "C0",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "skyblue",
 			code: {
 				red: "87",
@@ -1172,8 +1172,8 @@ const ColorConverter = (function() {
 				blue: "EB",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "slateblue",
 			code: {
 				red: "6A",
@@ -1181,8 +1181,8 @@ const ColorConverter = (function() {
 				blue: "CD",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "slategray",
 			code: {
 				red: "70",
@@ -1190,8 +1190,8 @@ const ColorConverter = (function() {
 				blue: "90",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "slategrey",
 			code: {
 				red: "70",
@@ -1199,8 +1199,8 @@ const ColorConverter = (function() {
 				blue: "90",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "snow",
 			code: {
 				red: "FF",
@@ -1208,8 +1208,8 @@ const ColorConverter = (function() {
 				blue: "FA",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "springgreen",
 			code: {
 				red: "00",
@@ -1217,8 +1217,8 @@ const ColorConverter = (function() {
 				blue: "7F",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "steelblue",
 			code: {
 				red: "46",
@@ -1226,8 +1226,8 @@ const ColorConverter = (function() {
 				blue: "B4",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "tan",
 			code: {
 				red: "D2",
@@ -1235,8 +1235,8 @@ const ColorConverter = (function() {
 				blue: "8C",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "teal",
 			code: {
 				red: "00",
@@ -1244,8 +1244,8 @@ const ColorConverter = (function() {
 				blue: "80",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "thistle",
 			code: {
 				red: "D8",
@@ -1253,8 +1253,8 @@ const ColorConverter = (function() {
 				blue: "D8",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "tomato",
 			code: {
 				red: "FF",
@@ -1262,8 +1262,8 @@ const ColorConverter = (function() {
 				blue: "47",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "turquoise",
 			code: {
 				red: "40",
@@ -1271,8 +1271,8 @@ const ColorConverter = (function() {
 				blue: "D0",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "violet",
 			code: {
 				red: "EE",
@@ -1280,8 +1280,8 @@ const ColorConverter = (function() {
 				blue: "EE",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "wheat",
 			code: {
 				red: "F5",
@@ -1298,8 +1298,8 @@ const ColorConverter = (function() {
 				blue: "FF",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "whitesmoke",
 			code: {
 				red: "F5",
@@ -1307,8 +1307,8 @@ const ColorConverter = (function() {
 				blue: "F5",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "yellow",
 			code: {
 				red: "FF",
@@ -1316,8 +1316,8 @@ const ColorConverter = (function() {
 				blue: "00",
 				alpha: "FF"
 			}
-    },
-    {
+		},
+		{
 			name: "yellowgreen",
 			code: {
 				red: "9A",
@@ -1325,7 +1325,7 @@ const ColorConverter = (function() {
 				blue: "32",
 				alpha: "FF"
 			}
-    }
+		}
 	];
 
 	const _colorConverter = Object.freeze({
