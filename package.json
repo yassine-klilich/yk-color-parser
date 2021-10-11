@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yassine-klilich/color-compiler.git"
+    "url": "git+https://github.com/yassine-klilich/yk-color-parser.git"
   },
   "author": "Yassine Klilich",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yassine-klilich/color-compiler/issues"
+    "url": "https://github.com/yassine-klilich/yk-color-parser/issues"
   },
-  "homepage": "https://github.com/yassine-klilich/color-compiler#readme"
+  "homepage": "https://github.com/yassine-klilich/yk-color-parser#readme"
 }

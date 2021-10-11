@@ -1,6 +1,6 @@
 "use strict";
 
-const ColorConverter = (function() {
+const ColorParser = (function() {
 	
 	const NAMED_COLORS = [
 		{
@@ -1328,11 +1328,11 @@ const ColorConverter = (function() {
 		}
 	];
 
-	const _colorConverter = Object.freeze({
-		convertColor: function(color) {
+	const _colorParser = Object.freeze({
+		parse: function(color) {
 			arguments.length
 			if(arguments.length == 0) {
-				throw new Error(`COLOR_CONVERT_ERR:: Failed to execute 'convertColor' on 'ColorConverter': 1 argument required, but only 0 present`);
+				throw new Error(`COLOR_CONVERT_ERR:: Failed to execute 'parse' on 'ColorParser': 1 argument required, but only 0 present`);
 			}
 
 			if(color == undefined) {
@@ -1547,5 +1547,5 @@ const ColorConverter = (function() {
 		return (typeof(value) == "string" || (value instanceof String));
 	}
 	
-	return _colorConverter;
+	return _colorParser;
 })()
