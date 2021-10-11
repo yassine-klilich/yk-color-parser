@@ -1,13 +1,20 @@
-# Color Converter
-[![Generic badge](https://img.shields.io/badge/version-v1.0.0-green?style=flat-square)](https://www.npmjs.com/package/color-converter)
+# YK-Color-Parser
+[![Generic badge](https://img.shields.io/badge/version-v1.0.0-green?style=flat-square)](https://www.npmjs.com/package/yk-color-parser)
 
-Convert color string value to an object, supporting RGB, HSL, HSV and HEX color formats.
+YK-Color-Parser is a lightweight library to parse string color value to an object, supporting RGB, HSL, HSV and HEX color formats.
 
 # Installation
-Install Color Converter library from the npm command :
+Install YK-Color-Parser library from the npm command :
 ```
-npm install color-converter
+npm install yk-color-parser
 ```
 
-## RGB / RGBA
+## How to use
+
+YK-Color-Parser library contains only one function to parse string color value, which is:
+```
+ColorParser.parse(<color>)
+```
+
+## Parse RGB/RGBA format
 
