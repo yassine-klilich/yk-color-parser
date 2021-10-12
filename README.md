@@ -9,6 +9,13 @@ Install YK-Color-Parser library from the npm command :
 npm install yk-color-parser
 ```
 
+### or download the files and import it using script tag
+```
+<script src="./yk-color-parser.js"></script> // 25KB
+or
+<script src="./yk-color-parser.min.js"></script> // 15KB
+```
+
 ## How to use
 
 YK-Color-Parser library contains only one function to parse string color value into an object.
