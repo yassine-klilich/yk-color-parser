@@ -10,7 +10,7 @@ npm install yk-color-parser
 ```
 
 ### or download the files and import it using script tag
-```
+```html
 <script src="./yk-color-parser.js"></script> // 25KB
 or
 <script src="./yk-color-parser.min.js"></script> // 15KB
@@ -19,13 +19,13 @@ or
 ## How to use
 
 YK-Color-Parser library contains only one function to parse string color value into an object.
-```
+```javascript
 ColorParser.parse(<color>);
 ```
 
 ## Parse Named Colors
 
-```
+```javascript
 ColorParser.parse("red"); // ==> { red: 'FF', green: '00', blue: '00', alpha: 'FF' }
 
 ColorParser.parse("yellow"); // ==> { red: 'FF', green: 'FF', blue: '00', alpha: 'FF' }
@@ -37,7 +37,7 @@ ColorParser.parse('blanchedalmond'); // ==> { red: 'FF', green: 'EB', blue: 'CD'
 
 ## Parse RGB/RGBA format
 
-```
+```javascript
 ColorParser.parse('rgb(120, 4, 64)'); // ==> { red: 120, green: 4, blue: 64, alpha: 1 }
 
 ColorParser.parse('rgba(120, 4, 64, 1)'); // ==> { red: 120, green: 4, blue: 64, alpha: 1 }
@@ -49,7 +49,7 @@ ColorParser.parse('rgb(120 4 64)'); // :warning: Error comma is required for sep
 
 ## Parse HSV/HSVA format
 
-```
+```javascript
 ColorParser.parse('hsv(120deg, 67%, 1%)'); // ==> { hue: 120, saturate: 67, value: 1, alpha: 1 }
 
 ColorParser.parse('hsva(120deg, 67%, 1%, 1)'); // ==> { hue: 120, saturate: 67, value: 1, alpha: 1 }
@@ -61,7 +61,7 @@ ColorParser.parse('hsva(120deg 67% 1% 1)'); // :warning: Error comma is required
 
 ## Parse HSL/HSLA format
 
-```
+```javascript
 ColorParser.parse('hsl(120deg, 67%, 1%)'); // ==> { hue: 120, saturate: 67, lightness: 1, alpha: 1 }
 
 ColorParser.parse('hsla(120deg, 67%, 1%, 1)'); // ==> { hue: 120, saturate: 67, lightness: 1, alpha: 1 }
@@ -73,7 +73,7 @@ ColorParser.parse('hsla(120deg 67% 1% 1)'); // :warning: Error comma is required
 
 ## Parse HEX format
 
-```
+```javascript
 ColorParser.parse('#45F'); // ==> { red: "44", green: "55", blue: "FF", alpha: "FF" }
 
 ColorParser.parse('#45FE'); // ==> { red: "44", green: "55", blue: "FF", alpha: "EE" }
