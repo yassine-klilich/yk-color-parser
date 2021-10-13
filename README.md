@@ -11,9 +11,9 @@ npm install yk-color-parser
 
 ### or download the files and import it using script tag
 ```html
-<script src="./yk-color-parser.js"></script> // 25KB
+<script src="./yk-color-parser.js"></script> // 27KB
 or
-<script src="./yk-color-parser.min.js"></script> // 15KB
+<script src="./yk-color-parser.min.js"></script> // 16KB
 ```
 
 ## How to use
@@ -42,9 +42,9 @@ ColorParser.parse('rgb(120, 4, 64)'); // ==> { red: 120, green: 4, blue: 64, alp
 
 ColorParser.parse('rgba(120, 4, 64, 1)'); // ==> { red: 120, green: 4, blue: 64, alpha: 1 }
 
-ColorParser.parse('rgba(120, 4, 64, 0.5)'); // ==> { red: 120, green: 4, blue: 64, alpha: 0.5 }
+ColorParser.parse('rgb(120 4 64)'); // ==> Without comma : { red: 120, green: 4, blue: 64, alpha: 1 }
 
-ColorParser.parse('rgb(120 4 64)'); // :warning: Error comma is required for separation 
+ColorParser.parse('rgba(120 4 64 0.5)'); // ==> Without comma : { red: 120, green: 4, blue: 64, alpha: 0.5 }
 ```
 
 ## Parse HSV/HSVA format
@@ -54,9 +54,9 @@ ColorParser.parse('hsv(120deg, 67%, 1%)'); // ==> { hue: 120, saturate: 67, valu
 
 ColorParser.parse('hsva(120deg, 67%, 1%, 1)'); // ==> { hue: 120, saturate: 67, value: 1, alpha: 1 }
 
-ColorParser.parse('hsva(120deg, 67%, 1%, 0.25)'); // ==> { hue: 120, saturate: 67, value: 1, alpha: 0.25 }
+ColorParser.parse('hsv(120deg 67% 1%)'); // ==> Without comma : { hue: 120, saturate: 67, value: 1, alpha: 1 }
 
-ColorParser.parse('hsva(120deg 67% 1% 1)'); // :warning: Error comma is required for separation 
+ColorParser.parse('hsva(120deg 67% 1% 0.25)'); // ==> Without comma : { hue: 120, saturate: 67, value: 1, alpha: 0.25 }
 ```
 
 ## Parse HSL/HSLA format
@@ -66,9 +66,9 @@ ColorParser.parse('hsl(120deg, 67%, 1%)'); // ==> { hue: 120, saturate: 67, ligh
 
 ColorParser.parse('hsla(120deg, 67%, 1%, 1)'); // ==> { hue: 120, saturate: 67, lightness: 1, alpha: 1 }
 
-ColorParser.parse('hsla(120deg, 67%, 1%, 0.25)'); // ==> { hue: 120, saturate: 67, lightness: 1, alpha: 0.25 }
+ColorParser.parse('hsl(120deg 67% 1%)'); // ==> Without comma : { hue: 120, saturate: 67, lightness: 1, alpha: 1 }
 
-ColorParser.parse('hsla(120deg 67% 1% 1)'); // :warning: Error comma is required for separation 
+ColorParser.parse('hsla(120deg 67% 1% 0.25)'); // ==> Without comma : { hue: 120, saturate: 67, lightness: 1, alpha: 0.25 }
 ```
 
 ## Parse HEX format

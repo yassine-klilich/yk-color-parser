@@ -30,8 +30,11 @@ describe("RGB test", function() {
 	
 	it("rgba(120 240 67 1)", function() {
 		const color = "rgba(120 240 67 1)";
-		const bindFunction = ColorParser.parse.bind(this, color);
-		expect(bindFunction).toThrow(new Error("COLOR_CONVERT_ERR:: 'rgba(120 240 67 1)' is an invalid RGBA color value"));
+		const resultColor = ColorParser.parse(color);
+		expect(resultColor.red).toBe(120)
+		expect(resultColor.green).toBe(240)
+		expect(resultColor.blue).toBe(67)
+		expect(resultColor.alpha).toBe(1)
 	})
 	
 	it("rgb(120 240 67 1)", function() {
@@ -54,8 +57,11 @@ describe("RGB test", function() {
 	
 	it("rgb(120 240 67)", function() {
 		const color = "rgb(120 240 67)";
-		const bindFunction = ColorParser.parse.bind(this, color);
-		expect(bindFunction).toThrow(new Error("COLOR_CONVERT_ERR:: 'rgb(120 240 67)' is an invalid RGB color value"));
+		const resultColor = ColorParser.parse(color);
+		expect(resultColor.red).toBe(120)
+		expect(resultColor.green).toBe(240)
+		expect(resultColor.blue).toBe(67)
+		expect(resultColor.alpha).toBe(1)
 	})
 	
 	it("rgb(400, 240, 67)", function() {
@@ -215,14 +221,20 @@ describe("HSV test", function() {
 	
 	it("hsva(120° 67% 1% 0.031)", function() {
 		const color = "hsva(120° 67% 1% 0.031)";
-		const bindFunction = ColorParser.parse.bind(this, color);
-		expect(bindFunction).toThrow(new Error("COLOR_CONVERT_ERR:: 'hsva(120° 67% 1% 0.031)' is an invalid HSVA color value"));
+		const resultColor = ColorParser.parse(color);
+		expect(resultColor.hue).toBe(120);
+		expect(resultColor.saturate).toBe(67);
+		expect(resultColor.value).toBe(1);
+		expect(resultColor.alpha).toBe(0.031);
 	})
 	
 	it("hsva(120 67% 1% 0.031)", function() {
 		const color = "hsva(120 67% 1% 0.031)";
-		const bindFunction = ColorParser.parse.bind(this, color);
-		expect(bindFunction).toThrow(new Error("COLOR_CONVERT_ERR:: 'hsva(120 67% 1% 0.031)' is an invalid HSVA color value"));
+		const resultColor = ColorParser.parse(color);
+		expect(resultColor.hue).toBe(120);
+		expect(resultColor.saturate).toBe(67);
+		expect(resultColor.value).toBe(1);
+		expect(resultColor.alpha).toBe(0.031);
 	})
 	
 	it("hsva(120deg, 67%, 1%, 0.031)", function() {
@@ -307,14 +319,20 @@ describe("HSL test", function() {
 	
 	it("hsla(120° 67% 1% 0.031)", function() {
 		const color = "hsla(120° 67% 1% 0.031)";
-		const bindFunction = ColorParser.parse.bind(this, color);
-		expect(bindFunction).toThrow(new Error("COLOR_CONVERT_ERR:: 'hsla(120° 67% 1% 0.031)' is an invalid HSLA color value"));
+		const resultColor = ColorParser.parse(color);
+		expect(resultColor.hue).toBe(120);
+		expect(resultColor.saturate).toBe(67);
+		expect(resultColor.lightness).toBe(1);
+		expect(resultColor.alpha).toBe(0.031);
 	})
 	
 	it("hsla(120 67% 1% 0.031)", function() {
 		const color = "hsla(120 67% 1% 0.031)";
-		const bindFunction = ColorParser.parse.bind(this, color);
-		expect(bindFunction).toThrow(new Error("COLOR_CONVERT_ERR:: 'hsla(120 67% 1% 0.031)' is an invalid HSLA color value"));
+		const resultColor = ColorParser.parse(color);
+		expect(resultColor.hue).toBe(120);
+		expect(resultColor.saturate).toBe(67);
+		expect(resultColor.lightness).toBe(1);
+		expect(resultColor.alpha).toBe(0.031);
 	})
 	
 	it("hsla(120deg, 67%, 1%, 0.031)", function() {

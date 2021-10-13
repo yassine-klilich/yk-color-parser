@@ -1369,8 +1369,12 @@ const ColorParser = (function() {
 	function compileRGB(color) {
 		let red, green, blue;
 
-		if(/^(rgb)\s{0,}\(\s{0,}([0-9]{1,})\s{0,},\s{0,}([0-9]{1,})\s{0,},\s{0,}([0-9]{1,})\s{0,}\)$/i.test(color) 
-			|| /^(rgba)\s{0,}\(\s{0,}([0-9]{1,})\s{0,},\s{0,}([0-9]{1,})\s{0,},\s{0,}([0-9]{1,})\s{0,},\s{0,}([0-9]|(0\.([0-9]{1,})))\s{0,}\)$/i.test(color)) {
+		const regexRGBSpace = /^(rgb)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}([0-9]{1,})\s{0,}([0-9]{1,})\s{0,}\)$/i;
+		const regexRGBComma = /^(rgb)\s{0,}\(\s{0,}([0-9]{1,})\s{0,},\s{0,}([0-9]{1,})\s{0,},\s{0,}([0-9]{1,})\s{0,}\)$/i;
+		const regexRGBASpace = /^(rgba)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}([0-9]{1,})\s{0,}([0-9]{1,})\s{0,}([0-9]|(0\.([0-9]{1,})))\s{0,}\)$/i;
+		const regexRGBAComma = /^(rgba)\s{0,}\(\s{0,}([0-9]{1,})\s{0,},\s{0,}([0-9]{1,})\s{0,},\s{0,}([0-9]{1,})\s{0,},\s{0,}([0-9]|(0\.([0-9]{1,})))\s{0,}\)$/i;
+
+		if(regexRGBSpace.test(color) || regexRGBComma.test(color) || regexRGBASpace.test(color) || regexRGBAComma.test(color)) {
 			let splitedValues = color.split(/([0-9]{1,})/);
 			red = parseInt(splitedValues[1]);
 			green = parseInt(splitedValues[3]);
@@ -1387,7 +1391,13 @@ const ColorParser = (function() {
 			}
 
 			if(/^(rgba)/i.test(color)) {
-				let alpha = parseFloat(color.split(",")[3]);
+				let alpha = NaN;
+				if(regexRGBASpace.test(color)) {
+					alpha = parseFloat(color.split(/\s{1,}/g)[3]);
+				}
+				else {
+					alpha = parseFloat(color.split(",")[3]);
+				}
 
 				if(alpha > 1) {
 					throw new RangeError(`COLOR_CONVERT_ERR:: '${color}' --> ${alpha} is an invalid alpha color, it must be an interger or a float number between 0 and 1`);
@@ -1412,8 +1422,12 @@ const ColorParser = (function() {
 	function compileHSV(color) {
 		let hue, saturate, value;
 		
-		if(/^(hsv)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,}\)$/i.test(color)
-			|| /^(hsva)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]|(0\.([0-9]{1,})))\s{0,}\)$/i.test(color)) {
+		const regexHSVSpace = /^(hsv)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,}([0-9]{1,})\s{0,}(%)\s{0,}([0-9]{1,})\s{0,}(%)\s{0,}\)$/i;
+		const regexHSVComma = /^(hsv)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,}\)$/i;
+		const regexHSVASpace = /^(hsva)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,}([0-9]{1,})\s{0,}(%)\s{0,}([0-9]{1,})\s{0,}(%)\s{0,}([0-9]|(0\.([0-9]{1,})))\s{0,}\)$/i;
+		const regexHSVAComma = /^(hsva)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]|(0\.([0-9]{1,})))\s{0,}\)$/i;
+
+		if(regexHSVSpace.test(color) || regexHSVComma.test(color) || regexHSVASpace.test(color) || regexHSVAComma.test(color)) {
 			let splitedValues = color.split(/([0-9]{1,})/);
 			hue = parseInt(splitedValues[1]);
 			saturate = parseInt(splitedValues[3]);
@@ -1430,7 +1444,13 @@ const ColorParser = (function() {
 			}
 
 			if(/^(hsva)/i.test(color)) {
-				let alpha = parseFloat(color.split(",")[3]);
+				let alpha = NaN;
+				if(regexHSVASpace.test(color)) {
+					alpha = parseFloat(color.split(/\s{1,}/g)[3]);
+				}
+				else {
+					alpha = parseFloat(color.split(",")[3]);
+				}
 
 				if(alpha > 1) {
 					throw new RangeError(`COLOR_CONVERT_ERR:: '${color}' --> ${alpha} is an invalid alpha value, it must be an interger or a float number between 0 and 1`);
@@ -1455,8 +1475,12 @@ const ColorParser = (function() {
 	function compileHSL(color) {
 		let hue, saturate, lightness;
 		
-		if(/^(hsl)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,}\)$/i.test(color)
-			|| /^(hsla)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]|(0\.([0-9]{1,})))\s{0,}\)$/i.test(color)) {
+		const regexHSLSpace = /^(hsl)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,}([0-9]{1,})\s{0,}(%)\s{0,}([0-9]{1,})\s{0,}(%)\s{0,}\)$/i;
+		const regexHSLComma = /^(hsl)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,}\)$/i;
+		const regexHSLASpace = /^(hsla)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,}([0-9]{1,})\s{0,}(%)\s{0,}([0-9]{1,})\s{0,}(%)\s{0,}([0-9]|(0\.([0-9]{1,})))\s{0,}\)$/i;
+		const regexHSLAComma = /^(hsla)\s{0,}\(\s{0,}([0-9]{1,})\s{0,}((deg)|(°)){0,1}\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]{1,})\s{0,}(%)\s{0,},\s{0,}([0-9]|(0\.([0-9]{1,})))\s{0,}\)$/i;
+
+		if(regexHSLSpace.test(color) || regexHSLComma.test(color) || regexHSLASpace.test(color) || regexHSLAComma.test(color)) {
 			let splitedValues = color.split(/([0-9]{1,})/);
 			hue = parseInt(splitedValues[1]);
 			saturate = parseInt(splitedValues[3]);
@@ -1473,7 +1497,13 @@ const ColorParser = (function() {
 			}
 
 			if(/^(hsla)/i.test(color)) {
-				let alpha = parseFloat(color.split(",")[3]);
+				let alpha = NaN;
+				if(regexHSLASpace.test(color)) {
+					alpha = parseFloat(color.split(/\s{1,}/g)[3]);
+				}
+				else {
+					alpha = parseFloat(color.split(",")[3]);
+				}
 
 				if(alpha > 1) {
 					throw new RangeError(`COLOR_CONVERT_ERR:: '${color}' --> ${alpha} is an invalid alpha value, it must be an interger or a float number between 0 and 1`);
