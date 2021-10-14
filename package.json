@@ -1,6 +1,6 @@
 {
   "name": "yk-color-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert a color from string value to an object",
   "main": "yk-color-parser.js",
   "scripts": {
