@@ -1,6 +1,6 @@
 {
   "name": "yk-color-parser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert a color from string value to an object",
   "main": "yk-color-parser.js",
   "scripts": {
@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/yassine-klilich/yk-color-parser/issues"
   },
-  "homepage": "https://github.com/yassine-klilich/yk-color-parser#readme"
+  "homepage": "https://github.com/yassine-klilich/yk-color-parser#readme",
+	"keywords": ["development", "npm", "color", "colors", "parser", "frontend", "rgb", "hsv", "hsl", "hex", "library", "lightweight", "opensource"]
 }
