@@ -1,5 +1,5 @@
 # YK-Color-Parser
-[![Generic badge](https://img.shields.io/badge/version-v1.0.0-green?style=flat-square)](https://www.npmjs.com/package/yk-color-parser)
+[![Generic badge](https://img.shields.io/badge/version-v1.1.0-green?style=flat-square)](https://www.npmjs.com/package/yk-color-parser)
 
 YK-Color-Parser is a lightweight library to parse string color value to an object, supporting RGB, HSL, HSV and HEX color formats.
 
@@ -9,10 +9,8 @@ Install YK-Color-Parser library from the npm command :
 npm install yk-color-parser
 ```
 
-### or download the files and import it using script tag
+### or download the minified file from GitHub and import it using script tag
 ```html
-<script src="./yk-color-parser.js"></script> // 27KB
-or
 <script src="./yk-color-parser.min.js"></script> // 16KB
 ```
 
@@ -20,6 +18,8 @@ or
 
 YK-Color-Parser library contains only one function to parse string color value into an object.
 ```javascript
+import ColorParser from "yk-color-parser";
+
 ColorParser.parse(<color>);
 ```
 
