@@ -1,5 +1,5 @@
 # YK-Color-Parser
-[![Generic badge](https://img.shields.io/badge/version-v1.1.0-green?style=flat-square)](https://www.npmjs.com/package/yk-color-parser)
+[![Generic badge](https://img.shields.io/badge/version-v1.1.2-green?style=flat-square)](https://www.npmjs.com/package/yk-color-parser)
 
 YK-Color-Parser is a lightweight library to parse string color value to an object, supporting RGB, HSL, HSV and HEX color formats.
 
